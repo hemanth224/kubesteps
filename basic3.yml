@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: basic3
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /api/users/
+        backend:
+          serviceName: users
+          servicePort: 3000
+      - path: /api/threads/
+        backend:
+          serviceName: threads
+          servicePort: 3000
